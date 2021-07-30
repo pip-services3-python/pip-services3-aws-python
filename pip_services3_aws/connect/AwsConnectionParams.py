@@ -36,10 +36,10 @@ class AwsConnectionParams(ConfigParams):
             "bucket", "mybucket"
         )
 
-        region = connection.get_region()                      // Result: "us-east-1"
-        access_id = connection.get_access_id()                // Result: "XXXXXXXXXXXXXXX"
-        secret_key = connection.get_access_key()              // Result: "XXXXXXXXXXXXXXX"
-        pin = connection.get_as_nullable_string("bucket")     // Result: "mybucket"
+        region = connection.get_region()                      # Result: "us-east-1"
+        access_id = connection.get_access_id()                # Result: "XXXXXXXXXXXXXXX"
+        secret_key = connection.get_access_key()              # Result: "XXXXXXXXXXXXXXX"
+        pin = connection.get_as_nullable_string("bucket")     # Result: "mybucket"
 
     """
 

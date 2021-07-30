@@ -52,7 +52,7 @@ class LambdaClient(IOpenable, IConfigurable, IReferenceable, ABC):
     Example:
 
     .. code-block:: python
-    
+
         class MyLambdaClient(LambdaClient, IMyClient):
             ...
 
@@ -63,7 +63,7 @@ class LambdaClient(IOpenable, IConfigurable, IReferenceable, ABC):
                 return result
             
             ...
-        }
+        
 
         client = MyLambdaClient()
         client.configure(ConfigParams.from_tuples(
@@ -182,7 +182,7 @@ class LambdaClient(IOpenable, IConfigurable, IReferenceable, ABC):
             return
         self._opened = False
 
-    def _invoke(self, invocation_type: str, cmd: str, correlation_id: str, args: Any) -> Any:
+    def _invoke(self, invocation_type: str, cmd: str, correlation_id: Optional[str], args: Any) -> Any:
         """
         Performs AWS Lambda Function invocation.
 

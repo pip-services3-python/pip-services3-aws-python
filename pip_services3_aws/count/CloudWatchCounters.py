@@ -232,4 +232,4 @@ class CloudWatchCounters(CachedCounters, IReferenceable, IOpenable):
         except Exception as e:
             if self.__logger:
                 self.__logger.error("cloudwatch_counters", e, "putMetricData error")
-            # raise e
+            raise e

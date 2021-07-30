@@ -220,12 +220,11 @@ exploses registered actions externally.</p>
         <span class="nb">id</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">id</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_controller</span><span class="o">.</span><span class="n">get_my_data</span><span class="p">(</span><span class="n">correlationId</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
 
-   <span class="k">def</span> <span class="nf">_register</span><span class="p">():</span>
+   <span class="k">def</span> <span class="nf">_register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
        <span class="bp">self</span><span class="o">.</span><span class="n">register_action</span><span class="p">(</span><span class="s2">&quot;get_my_data&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">__action</span><span class="p">)</span>
 
        <span class="o">...</span>
 
-<span class="p">}</span>
 
 <span class="n">service</span> <span class="o">=</span> <span class="n">MyLambdaService</span><span class="p">()</span>
 <span class="n">service</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">ConfigParams</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span>
@@ -236,7 +235,7 @@ exploses registered actions externally.</p>
 
 <span class="n">service</span><span class="o">.</span><span class="n">set_references</span><span class="p">(</span><span class="n">References</span><span class="o">.</span><span class="n">from_tuples</span><span class="p">(</span>
     <span class="n">Descriptor</span><span class="p">(</span><span class="s2">&quot;mygroup&quot;</span><span class="p">,</span><span class="s2">&quot;controller&quot;</span><span class="p">,</span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="s2">&quot;default&quot;</span><span class="p">,</span><span class="s2">&quot;1.0&quot;</span><span class="p">),</span> <span class="n">controller</span>
-<span class="p">));</span>
+<span class="p">))</span>
 
 <span class="n">service</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The GRPC service is running on port 8080&quot;</span><span class="p">)</span>
@@ -309,14 +308,6 @@ what action shall be called.</p>
 <dd class="field-odd"><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p>
 </dd>
 </dl>
-</dd></dl>
-
-<dl class="py method">
-<dt id="pip_services3_aws.services.LambdaService.LambdaService.register">
-<code class="sig-name descname">register</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_aws.services.LambdaService.LambdaService.register" title="Permalink to this definition">¶</a></dt>
-<dd><p>Registers all service routes in HTTP endpoint.</p>
-<p>This method is called by the service and must be overriden
-in child classes.</p>
 </dd></dl>
 
 <dl class="py method">

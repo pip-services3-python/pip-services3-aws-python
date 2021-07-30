@@ -56,12 +56,11 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
                 id = params.id
                 return self._controller.get_my_data(correlationId, id)
 
-           def _register():
+           def _register(self):
                self.register_action("get_my_data", None, __action)
 
                ...
            
-        }
 
         service = MyLambdaService()
         service.configure(ConfigParams.from_tuples(
@@ -72,7 +71,7 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
 
         service.set_references(References.from_tuples(
             Descriptor("mygroup","controller","default","default","1.0"), controller
-        ));
+        ))
 
         service.open("123")
         print("The GRPC service is running on port 8080")
@@ -124,7 +123,7 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
         """
         return self.__actions
 
-    def _instrument(self, correlation_id: str, name: str) -> InstrumentTiming:
+    def _instrument(self, correlation_id: Optional[str], name: str) -> InstrumentTiming:
         """
         Adds instrumentation to log calls and measure call time.
         It returns a Timing object that is used to end the time measurement.
@@ -251,7 +250,7 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
         """
         self.__interceptors.append(action)
 
-    def register(self):
+    def _register(self):
         """
         Registers all service routes in HTTP endpoint.
 
