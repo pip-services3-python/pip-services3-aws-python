@@ -1,0 +1,7 @@
+pip\_services3\_aws.log.CloudWatchLogger module
+===============================================
+
+.. automodule:: pip_services3_aws.log.CloudWatchLogger
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,21 @@
+pip\_services3\_aws.services package
+====================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.services.CommandableLambdaService
+   pip_services3_aws.services.ILambdaService
+   pip_services3_aws.services.LambdaAction
+   pip_services3_aws.services.LambdaService
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws.services
+   :members:
+   :undoc-members:
+   :show-inheritance:

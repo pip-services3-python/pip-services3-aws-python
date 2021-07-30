@@ -1,0 +1,7 @@
+pip\_services3\_aws.containers.CommandableLambdaFunction module
+===============================================================
+
+.. automodule:: pip_services3_aws.containers.CommandableLambdaFunction
+   :members:
+   :undoc-members:
+   :show-inheritance:

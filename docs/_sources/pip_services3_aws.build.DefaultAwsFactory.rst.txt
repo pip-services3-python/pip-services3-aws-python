@@ -1,0 +1,7 @@
+pip\_services3\_aws.build.DefaultAwsFactory module
+==================================================
+
+.. automodule:: pip_services3_aws.build.DefaultAwsFactory
+   :members:
+   :undoc-members:
+   :show-inheritance:

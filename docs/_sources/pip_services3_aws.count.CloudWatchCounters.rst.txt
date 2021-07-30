@@ -1,0 +1,7 @@
+pip\_services3\_aws.count.CloudWatchCounters module
+===================================================
+
+.. automodule:: pip_services3_aws.count.CloudWatchCounters
+   :members:
+   :undoc-members:
+   :show-inheritance:

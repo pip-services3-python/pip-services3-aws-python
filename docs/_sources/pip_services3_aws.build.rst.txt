@@ -1,0 +1,18 @@
+pip\_services3\_aws.build package
+=================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.build.DefaultAwsFactory
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws.build
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+pip\_services3\_aws.test.TestLambdaClient module
+================================================
+
+.. automodule:: pip_services3_aws.test.TestLambdaClient
+   :members:
+   :undoc-members:
+   :show-inheritance:

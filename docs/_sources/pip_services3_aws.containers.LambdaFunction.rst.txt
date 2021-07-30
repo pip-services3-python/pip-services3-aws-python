@@ -1,0 +1,7 @@
+pip\_services3\_aws.containers.LambdaFunction module
+====================================================
+
+.. automodule:: pip_services3_aws.containers.LambdaFunction
+   :members:
+   :undoc-members:
+   :show-inheritance:

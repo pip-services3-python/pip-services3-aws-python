@@ -1,0 +1,7 @@
+pip\_services3\_aws.services.LambdaService module
+=================================================
+
+.. automodule:: pip_services3_aws.services.LambdaService
+   :members:
+   :undoc-members:
+   :show-inheritance:

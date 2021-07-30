@@ -1,0 +1,19 @@
+pip\_services3\_aws.test package
+================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.test.TestCommandableLambdaClient
+   pip_services3_aws.test.TestLambdaClient
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws.test
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+pip\_services3\_aws.connect.AwsConnectionResolver module
+========================================================
+
+.. automodule:: pip_services3_aws.connect.AwsConnectionResolver
+   :members:
+   :undoc-members:
+   :show-inheritance:

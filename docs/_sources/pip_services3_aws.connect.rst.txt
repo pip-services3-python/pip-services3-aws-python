@@ -1,0 +1,19 @@
+pip\_services3\_aws.connect package
+===================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.connect.AwsConnectionParams
+   pip_services3_aws.connect.AwsConnectionResolver
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws.connect
+   :members:
+   :undoc-members:
+   :show-inheritance:

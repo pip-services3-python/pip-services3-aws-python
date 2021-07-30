@@ -1,0 +1,19 @@
+pip\_services3\_aws.count package
+=================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.count.CloudWatchCounters
+   pip_services3_aws.count.CloudWatchUnit
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws.count
+   :members:
+   :undoc-members:
+   :show-inheritance:

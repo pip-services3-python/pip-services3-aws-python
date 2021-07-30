@@ -1,0 +1,18 @@
+pip\_services3\_aws.log package
+===============================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.log.CloudWatchLogger
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws.log
+   :members:
+   :undoc-members:
+   :show-inheritance:

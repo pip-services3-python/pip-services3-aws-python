@@ -1,0 +1,19 @@
+pip\_services3\_aws.containers package
+======================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.containers.CommandableLambdaFunction
+   pip_services3_aws.containers.LambdaFunction
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws.containers
+   :members:
+   :undoc-members:
+   :show-inheritance:

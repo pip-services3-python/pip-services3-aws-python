@@ -1,0 +1,7 @@
+pip\_services3\_aws.services.CommandableLambdaService module
+============================================================
+
+.. automodule:: pip_services3_aws.services.CommandableLambdaService
+   :members:
+   :undoc-members:
+   :show-inheritance:

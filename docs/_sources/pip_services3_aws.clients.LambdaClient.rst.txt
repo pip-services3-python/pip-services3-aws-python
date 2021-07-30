@@ -1,0 +1,7 @@
+pip\_services3\_aws.clients.LambdaClient module
+===============================================
+
+.. automodule:: pip_services3_aws.clients.LambdaClient
+   :members:
+   :undoc-members:
+   :show-inheritance:

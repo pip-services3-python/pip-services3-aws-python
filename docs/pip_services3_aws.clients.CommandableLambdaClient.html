@@ -1,0 +1,326 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>pip_services3_aws.clients.CommandableLambdaClient module &mdash; pip-services3-aws  documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="pip_services3_aws.clients.LambdaClient module" href="pip_services3_aws.clients.LambdaClient.html" />
+    <link rel="prev" title="pip_services3_aws.clients package" href="pip_services3_aws.clients.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> pip-services3-aws
+          
+
+          
+          </a>
+
+          
+            
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">pip_services3_aws</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="pip_services3_aws.html">pip_services3_aws package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="pip_services3_aws.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_aws.build.html">pip_services3_aws.build package</a></li>
+<li class="toctree-l4 current"><a class="reference internal" href="pip_services3_aws.clients.html">pip_services3_aws.clients package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_aws.connect.html">pip_services3_aws.connect package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_aws.containers.html">pip_services3_aws.containers package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_aws.count.html">pip_services3_aws.count package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_aws.log.html">pip_services3_aws.log package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_aws.services.html">pip_services3_aws.services package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="pip_services3_aws.test.html">pip_services3_aws.test package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pip_services3_aws.html#module-pip_services3_aws">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">pip-services3-aws</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+          <li><a href="modules.html">pip_services3_aws</a> &raquo;</li>
+        
+          <li><a href="pip_services3_aws.html">pip_services3_aws package</a> &raquo;</li>
+        
+          <li><a href="pip_services3_aws.clients.html">pip_services3_aws.clients package</a> &raquo;</li>
+        
+      <li>pip_services3_aws.clients.CommandableLambdaClient module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/pip_services3_aws.clients.CommandableLambdaClient.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-pip_services3_aws.clients.CommandableLambdaClient">
+<span id="pip-services3-aws-clients-commandablelambdaclient-module"></span><h1>pip_services3_aws.clients.CommandableLambdaClient module<a class="headerlink" href="#module-pip_services3_aws.clients.CommandableLambdaClient" title="Permalink to this headline">¶</a></h1>
+<dl class="py class">
+<dt id="pip_services3_aws.clients.CommandableLambdaClient.CommandableLambdaClient">
+<em class="property">class </em><code class="sig-prename descclassname">pip_services3_aws.clients.CommandableLambdaClient.</code><code class="sig-name descname">CommandableLambdaClient</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">name</span><span class="p">:</span> <span class="n">str</span></em><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_aws.clients.CommandableLambdaClient.CommandableLambdaClient" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <a class="reference internal" href="pip_services3_aws.clients.LambdaClient.html#pip_services3_aws.clients.LambdaClient.LambdaClient" title="pip_services3_aws.clients.LambdaClient.LambdaClient"><code class="xref py py-class docutils literal notranslate"><span class="pre">pip_services3_aws.clients.LambdaClient.LambdaClient</span></code></a></p>
+<p>Abstract client that calls commandable AWS Lambda Functions.</p>
+<p>Commandable services are generated automatically for <code class="xref py py-class docutils literal notranslate"><span class="pre">ICommandable</span></code> objects.
+Each command is exposed as action determined by “cmd” parameter.</p>
+<p>### Configuration parameters ###</p>
+<blockquote>
+<div><ul class="simple">
+<li><dl class="simple">
+<dt>connections:</dt><dd><ul>
+<li><p>discovery_key:               (optional) a key to retrieve the connection from <code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code></p></li>
+<li><p>region:                      (optional) AWS region</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>credentials:</dt><dd><ul>
+<li><p>store_key:                   (optional) a key to retrieve the credentials from <code class="xref py py-class docutils literal notranslate"><span class="pre">ICredentialStore</span></code></p></li>
+<li><p>access_id:                   AWS access/client id</p></li>
+<li><p>access_key:                  AWS access/client id</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>options:</dt><dd><ul>
+<li><p>connect_timeout:             (optional) connection timeout in milliseconds (default: 10 sec)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</div></blockquote>
+<dl class="simple">
+<dt>### References ###</dt><dd><ul class="simple">
+<li><p><cite>*:logger:*:*:1.0</cite>           (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ILogger</span></code> components to pass log messages</p></li>
+<li><p><cite>*:counters:*:*:1.0</cite>         (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">ICounters</span></code> components to pass collected measurements</p></li>
+<li><p><cite>*:discovery:*:*:1.0</cite>        (optional) <code class="xref py py-class docutils literal notranslate"><span class="pre">IDiscovery</span></code> services to resolve connection</p></li>
+<li><p><cite>*:credential-store:*:*:1.0</cite>  (optional) Credential stores to resolve credentials</p></li>
+</ul>
+</dd>
+</dl>
+<p>See <a class="reference internal" href="pip_services3_aws.containers.LambdaFunction.html#pip_services3_aws.containers.LambdaFunction.LambdaFunction" title="pip_services3_aws.containers.LambdaFunction.LambdaFunction"><code class="xref py py-class docutils literal notranslate"><span class="pre">LambdaFunction</span></code></a></p>
+<p>Example:</p>
+<blockquote>
+<div><div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">MyLambdaClient</span><span class="p">(</span><span class="n">CommandableLambdaClient</span><span class="p">,</span> <span class="n">IMyClient</span><span class="p">):</span>
+    <span class="o">...</span>
+
+    <span class="k">def</span> <span class="nf">get_data</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">correlation_id</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="nb">id</span><span class="p">:</span> <span class="nb">str</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="n">Any</span>
+        <span class="k">return</span> <span class="n">this</span><span class="o">.</span><span class="n">callCommand</span><span class="p">(</span><span class="s2">&quot;get_data&quot;</span><span class="p">,</span> <span class="n">correlation_id</span><span class="p">,</span> <span class="p">{</span> <span class="s1">&#39;id&#39;</span><span class="p">:</span> <span class="nb">id</span> <span class="p">})</span>
+
+<span class="o">...</span>
+
+<span class="n">client</span> <span class="o">=</span> <span class="n">MyLambdaClient</span><span class="p">()</span>
+<span class="n">client</span><span class="o">.</span><span class="n">configure</span><span class="p">(</span><span class="n">ConfigParams</span><span class="o">.</span><span class="n">from_еuples</span><span class="p">(</span>
+    <span class="s2">&quot;connection.region&quot;</span><span class="p">,</span> <span class="s2">&quot;us-east-1&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;connection.access_id&quot;</span><span class="p">,</span> <span class="s2">&quot;XXXXXXXXXXX&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;connection.access_key&quot;</span><span class="p">,</span> <span class="s2">&quot;XXXXXXXXXXX&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;connection.arn&quot;</span><span class="p">,</span> <span class="s2">&quot;YYYYYYYYYYYYY&quot;</span>
+<span class="p">))</span>
+
+<span class="n">result</span> <span class="o">=</span> <span class="n">client</span><span class="o">.</span><span class="n">get_data</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">,</span> <span class="s2">&quot;1&quot;</span><span class="p">)</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+</div></blockquote>
+<dl class="py method">
+<dt id="pip_services3_aws.clients.CommandableLambdaClient.CommandableLambdaClient.call_command">
+<code class="sig-name descname">call_command</code><span class="sig-paren">(</span><em class="sig-param"><span class="n">cmd</span><span class="p">:</span> <span class="n">str</span></em>, <em class="sig-param"><span class="n">correlation_id</span><span class="p">:</span> <span class="n">Optional<span class="p">[</span>str<span class="p">]</span></span></em>, <em class="sig-param"><span class="n">params</span><span class="p">:</span> <span class="n">dict</span></em><span class="sig-paren">)</span> &#x2192; Any<a class="headerlink" href="#pip_services3_aws.clients.CommandableLambdaClient.CommandableLambdaClient.call_command" title="Permalink to this definition">¶</a></dt>
+<dd><p>Calls a remote action in AWS Lambda function.
+The name of the action is added as “cmd” parameter
+to the action parameters.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>cmd</strong> – an action name</p></li>
+<li><p><strong>correlation_id</strong> – (optional) transaction id to trace execution through call chain.</p></li>
+<li><p><strong>params</strong> – command parameters.</p></li>
+</ul>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>action result.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="pip_services3_aws.clients.LambdaClient.html" class="btn btn-neutral float-right" title="pip_services3_aws.clients.LambdaClient module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="pip_services3_aws.clients.html" class="btn btn-neutral float-left" title="pip_services3_aws.clients package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2021, Sergey Seroukhov
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

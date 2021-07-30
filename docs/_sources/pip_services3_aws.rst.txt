@@ -1,0 +1,25 @@
+pip\_services3\_aws package
+===========================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.build
+   pip_services3_aws.clients
+   pip_services3_aws.connect
+   pip_services3_aws.containers
+   pip_services3_aws.count
+   pip_services3_aws.log
+   pip_services3_aws.services
+   pip_services3_aws.test
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,7 @@
+pip\_services3\_aws.connect.AwsConnectionParams module
+======================================================
+
+.. automodule:: pip_services3_aws.connect.AwsConnectionParams
+   :members:
+   :undoc-members:
+   :show-inheritance:

@@ -1,0 +1,19 @@
+pip\_services3\_aws.clients package
+===================================
+
+Submodules
+----------
+
+.. toctree::
+   :maxdepth: 4
+
+   pip_services3_aws.clients.CommandableLambdaClient
+   pip_services3_aws.clients.LambdaClient
+
+Module contents
+---------------
+
+.. automodule:: pip_services3_aws.clients
+   :members:
+   :undoc-members:
+   :show-inheritance:
