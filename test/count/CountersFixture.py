@@ -23,6 +23,13 @@ class CountersFixture:
 
         counter = self.__counters.get("Test.Increment", CounterType.Increment)
         assert counter is not None
+        assert counter.count == 4
+
+        self.__counters.timestamp_now("Test.Timestamp")
+        self.__counters.timestamp_now("Test.Timestamp")
+
+        counter = self.__counters.get("Test.Timestamp", CounterType.Timestamp)
+        assert counter is not None
         assert counter.time is not None
 
         self.__counters.stats("Test.Statistics", 1)

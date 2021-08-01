@@ -111,7 +111,7 @@ class CloudWatchLogger(CachedLogger, IReferenceable, IOpenable):
 
         context_info: ContextInfo = references.get_one_optional(
             Descriptor("pip-services", "context-info", "default", "*", "1.0"))
-        if context_info is not None and self.__stream is not None:
+        if context_info is not None and self.__stream is None:
             self.__stream = context_info.name
         if context_info is not None and self.__group is None:
             self.__group = context_info.context_id
@@ -174,11 +174,11 @@ class CloudWatchLogger(CachedLogger, IReferenceable, IOpenable):
                     'logStreamNamePrefix': self.__stream,
                 })
                 if len(data.get('logStreams', '')) > 0:
-                    self.__last_token = data['logStreams'][0]['uploadSequenceToken']
+                    self.__last_token = data['logStreams'][0].get('uploadSequenceToken')
                 if self.__timer is None:
                     self.__timer = SetInterval(self.dump, self._interval)
+                    self.__timer.setDaemon(True)
                     self.__timer.start()
-                    self.__timer.stop()
 
                 return
             raise e
@@ -241,22 +241,22 @@ class CloudWatchLogger(CachedLogger, IReferenceable, IOpenable):
             })
 
         # get token again if saving log from another container
-        stream_data = self.__describe_log_streams({
+        data = self.__describe_log_streams({
             'logGroupName': self.__group,
             'logStreamNamePrefix': self.__stream,
         })
 
-        if len(stream_data.get('logStreams', '')) > 0:
-            self.__last_token = stream_data[0]['uploadSequenceToken']
+        if len(data.get('logStreams', '')) > 0:
+            self.__last_token = data['logStreams'][0].get('uploadSequenceToken')
 
         log_data = self.__put_log_events({
             'logEvents': events,
             'logGroupName': self.__group,
             'logStreamName': self.__stream,
-            'sequenceToken': self.__last_token
+            'sequenceToken': self.__last_token or ''
         })
 
-        self.__last_token = log_data['nextSequenceToken']
+        self.__last_token = log_data.get('nextSequenceToken')
 
     def __create_log_group(self, params: dict) -> dict:
         return self.__client.create_log_group(**params)
@@ -277,7 +277,7 @@ class CloudWatchLogger(CachedLogger, IReferenceable, IOpenable):
                 }
                 data = self.__client.describe_log_streams(**params)
                 if len(data.get('logStreams', '')) > 0:
-                    self.__last_token = data['logStreams'][0]['uploadSequenceToken']
+                    self.__last_token = data['logStreams'][0].get('uploadSequenceToken')
                     raise e
             else:
                 raise e
@@ -288,3 +288,4 @@ class CloudWatchLogger(CachedLogger, IReferenceable, IOpenable):
         except Exception as e:
             if self.__logger:
                 self.__logger.error("cloudwatch_logger", e, "putLogEvents error")
+            raise e

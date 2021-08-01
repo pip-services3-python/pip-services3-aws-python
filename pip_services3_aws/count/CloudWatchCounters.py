@@ -159,10 +159,13 @@ class CloudWatchCounters(CachedCounters, IReferenceable, IOpenable):
     def __get_counter_data(self, counter: Counter, now: datetime.datetime, dimensions: List[Any]) -> Any:
         value = {
             'MetricName': counter.name,
-            'Timestamp': now,
             'Dimensions': dimensions,
             'Unit': CloudWatchUnit.Nothing,
         }
+
+        if counter.time:
+            value['Timestamp'] = counter.time
+
         if counter.type == CounterType.Increment:
             value['Value'] = counter.count
             value['Unit'] = CloudWatchUnit.Count
@@ -197,19 +200,14 @@ class CloudWatchCounters(CachedCounters, IReferenceable, IOpenable):
         if self.__client is None:
             return
 
-        dimensions = []
-        dimensions.append({
+        dimensions = [{
             'Name': "InstanceID",
             'Value': self.__instance
-        })
+        }]
+
         now = datetime.datetime.now()
 
         data = []
-
-        params = {
-            'MetricData': data,
-            'Namespace': self.__source
-        }
 
         for counter in counters:
             data.append(self.__get_counter_data(counter, now, dimensions))
