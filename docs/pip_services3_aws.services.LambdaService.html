@@ -220,7 +220,7 @@ exploses registered actions externally.</p>
         <span class="nb">id</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">id</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_controller</span><span class="o">.</span><span class="n">get_my_data</span><span class="p">(</span><span class="n">correlationId</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
 
-   <span class="k">def</span> <span class="nf">_register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+   <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
        <span class="bp">self</span><span class="o">.</span><span class="n">register_action</span><span class="p">(</span><span class="s2">&quot;get_my_data&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">,</span> <span class="n">__action</span><span class="p">)</span>
 
        <span class="o">...</span>

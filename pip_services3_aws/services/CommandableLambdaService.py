@@ -58,7 +58,7 @@ class CommandableLambdaService(LambdaService, ABC):
         self._dependency_resolver.put('controller', 'none')
         self.__command_set: CommandSet = None
 
-    def _register(self):
+    def register(self):
         """
         Registers all actions in AWS Lambda function.
         """

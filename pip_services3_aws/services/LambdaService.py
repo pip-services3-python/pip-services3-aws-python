@@ -56,7 +56,7 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
                 id = params.id
                 return self._controller.get_my_data(correlationId, id)
 
-           def _register(self):
+           def register(self):
                self.register_action("get_my_data", None, __action)
 
                ...
@@ -157,7 +157,7 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
         if self.__opened:
             return
 
-        self._register()
+        self.register()
 
         self.__opened = True
 
@@ -250,7 +250,7 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
         """
         self.__interceptors.append(action)
 
-    def _register(self):
+    def register(self):
         """
         Registers all service routes in HTTP endpoint.
 
