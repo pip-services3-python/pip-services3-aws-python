@@ -55,7 +55,7 @@ class DummyLambdaFunction(LambdaFunction):
             params['dummy_id']
         )
 
-    def _register(self):
+    def register(self):
         self._register_action(
             'get_dummies',
             ObjectSchema(True).with_optional_property("filter", FilterParamsSchema())

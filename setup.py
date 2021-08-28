@@ -23,7 +23,7 @@ except:
 
 setup(
     name='pip_services3_aws',
-    version='3.2.4',
+    version='3.0.1',
     url='http://github.com/pip-services3-python/pip-services3-c-python',
     license='MIT',
     author='Conceptual Vision Consulting LLC',

@@ -111,7 +111,7 @@ class LambdaFunction(Container, ABC):
         self._counters.set_references(references)
         self._dependency_resolver.set_references(references)
 
-        self._register()
+        self.register()
 
     def open(self, correlation_id: Optional[str]):
         """
@@ -160,7 +160,7 @@ class LambdaFunction(Container, ABC):
         self.__capture_exit(correlation_id)
         self.open(correlation_id)
 
-    def _register(self):
+    def register(self):
         """
         Registers all actions in this lambda function.
 

@@ -86,7 +86,7 @@ class CommandableLambdaFunction(LambdaFunction, ABC):
 
             self._register_action(command.get_name(), None, wrapper(command))
 
-    def _register(self):
+    def register(self):
         """
         Registers all actions in this lambda function.
         """
