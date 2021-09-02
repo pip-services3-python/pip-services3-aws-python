@@ -75,9 +75,10 @@ class CommandableLambdaClient(LambdaClient):
         :param params: command parameters.
         :return: action result.
         """
-        timing = self._instrument(correlation_id, self.__name + '.' + cmd)
+        command = self.__name + '.' + cmd
+        timing = self._instrument(correlation_id, command)
         try:
-            result = self._call(cmd, correlation_id, params)
+            result = self._call(command, correlation_id, params)
             timing.end_timing()
             return result
         except Exception as e:
