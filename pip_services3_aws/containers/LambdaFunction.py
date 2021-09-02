@@ -99,7 +99,7 @@ class LambdaFunction(Container, ABC):
             self._logger.info(correlation_id, 'Goodbye!' or sys.exit(0))
             sys.exit(0)
 
-        signal.signal(signal.SIGBREAK, shutdown)
+        signal.signal(signal.SIGTERM, shutdown)
 
     def set_references(self, references: IReferences):
         """

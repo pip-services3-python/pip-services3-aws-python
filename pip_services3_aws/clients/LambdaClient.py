@@ -210,8 +210,10 @@ class LambdaClient(IOpenable, IConfigurable, IReferenceable, ABC):
             data = self._lambda.invoke(**params)
             result = data['Payload'].read()
 
-            if isinstance(result, str):
+            if isinstance(result, (str, bytes, bytearray)):
                 try:
+                    # fix double quotes
+                    result = json.loads(result).replace("'", "\"")
                     result = json.loads(result)
                 except Exception as e:
                     raise InvocationException(
