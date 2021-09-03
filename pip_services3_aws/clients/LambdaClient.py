@@ -212,8 +212,6 @@ class LambdaClient(IOpenable, IConfigurable, IReferenceable, ABC):
 
             if isinstance(result, (str, bytes, bytearray)):
                 try:
-                    # fix double quotes
-                    result = json.loads(result).replace("'", "\"")
                     result = json.loads(result)
                 except Exception as e:
                     raise InvocationException(
