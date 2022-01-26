@@ -12,8 +12,8 @@ from pip_services3_components.log import CompositeLogger
 from pip_services3_components.trace.CompositeTracer import CompositeTracer
 from pip_services3_rpc.services.InstrumentTiming import InstrumentTiming
 
-from pip_services3_aws.services.ILambdaService import ILambdaService
-from pip_services3_aws.services.LambdaAction import LambdaAction
+from .ILambdaService import ILambdaService
+from .LambdaAction import LambdaAction
 
 
 class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, ABC):

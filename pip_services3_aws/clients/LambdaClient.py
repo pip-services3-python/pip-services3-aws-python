@@ -17,8 +17,8 @@ from pip_services3_components.log import CompositeLogger
 from pip_services3_components.trace.CompositeTracer import CompositeTracer
 from pip_services3_rpc.services.InstrumentTiming import InstrumentTiming
 
-from pip_services3_aws.connect.AwsConnectionParams import AwsConnectionParams
-from pip_services3_aws.connect.AwsConnectionResolver import AwsConnectionResolver
+from pip_services3_aws.connect import AwsConnectionParams
+from pip_services3_aws.connect import AwsConnectionResolver
 
 
 class LambdaClient(IOpenable, IConfigurable, IReferenceable, ABC):

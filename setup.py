@@ -23,7 +23,7 @@ except:
 
 setup(
     name='pip_services3_aws',
-    version='3.0.5',
+    version='3.0.6',
     url='http://github.com/pip-services3-python/pip-services3-c-python',
     license='MIT',
     author='Conceptual Vision Consulting LLC',
@@ -36,8 +36,12 @@ setup(
     zip_safe=True,
     platforms='any',
     install_requires=[
-        'iso8601', 'PyYAML', 'pystache', 'pytest', 'pytz', 'bottle', 'requests', 'netifaces',
-        'pip-services3-commons', 'pip-services3-components', 'cheroot', 'beaker', 'boto3'
+        'boto3 >= 1.20.40, < 2.0.0',
+
+        'pip_services3_commons >= 3.3.11, < 4.0',
+        'pip_services3_components >= 3.5.6, < 4.0',
+        'pip_services3_container >= 3.2.4, < 4.0',
+        'pip_services3_rpc >= 3.3.0, < 4.0'
     ],
     classifiers=[
         'Development Status :: 4 - Beta',
@@ -45,7 +49,6 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Operating System :: OS Independent',
         'Programming Language :: Python',
-        'Programming Language :: Python :: 3.5',
         'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',

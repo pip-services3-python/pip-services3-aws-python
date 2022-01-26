@@ -1,6 +1,12 @@
 # <img src="https://uploads-ssl.webflow.com/5ea5d3315186cf5ec60c3ee4/5edf1c94ce4c859f2b188094_logo.svg" alt="Pip.Services Logo" width="200">
 <br/> AWS specific components for Python Changelog
 
+## <a name="3.0.6"></a> 3.0.6 (2022-26-01)
+
+# Bug fixes
+* Optimize imports
+* Fixed dependencies
+
 ## <a name="3.0.3-3.0.5"></a> 3.0.3-3.0.5 (2021-09-03)
 
 # Bug fixes

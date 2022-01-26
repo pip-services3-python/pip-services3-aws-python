@@ -4,7 +4,7 @@ from pip_services3_commons.refer import IReferenceable, IReferences
 from pip_services3_components.auth import CredentialResolver
 from pip_services3_components.connect import ConnectionResolver
 
-from pip_services3_aws.connect.AwsConnectionParams import AwsConnectionParams
+from .AwsConnectionParams import AwsConnectionParams
 
 
 class AwsConnectionResolver(IConfigurable, IReferenceable):

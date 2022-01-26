@@ -2,8 +2,8 @@
 from pip_services3_commons.refer import Descriptor
 from pip_services3_components.build import Factory
 
-from pip_services3_aws.count.CloudWatchCounters import CloudWatchCounters
-from pip_services3_aws.log.CloudWatchLogger import CloudWatchLogger
+from pip_services3_aws.count import CloudWatchCounters
+from pip_services3_aws.log import CloudWatchLogger
 
 
 class DefaultAwsFactory(Factory):

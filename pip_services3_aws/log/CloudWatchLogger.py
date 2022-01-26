@@ -11,8 +11,8 @@ from pip_services3_components.info import ContextInfo
 from pip_services3_components.log import CachedLogger, CompositeLogger, LogLevel, LogMessage
 from pip_services3_components.test.SetInterval import SetInterval
 
-from pip_services3_aws.connect.AwsConnectionParams import AwsConnectionParams
-from pip_services3_aws.connect.AwsConnectionResolver import AwsConnectionResolver
+from pip_services3_aws.connect import AwsConnectionParams
+from pip_services3_aws.connect import AwsConnectionResolver
 
 
 class CloudWatchLogger(CachedLogger, IReferenceable, IOpenable):

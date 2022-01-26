@@ -11,9 +11,9 @@ from pip_services3_components.count import CachedCounters, Counter, CounterType
 from pip_services3_components.info import ContextInfo
 from pip_services3_components.log import CompositeLogger
 
-from pip_services3_aws.connect.AwsConnectionParams import AwsConnectionParams
-from pip_services3_aws.connect.AwsConnectionResolver import AwsConnectionResolver
-from pip_services3_aws.count.CloudWatchUnit import CloudWatchUnit
+from pip_services3_aws.connect import AwsConnectionParams
+from pip_services3_aws.connect import AwsConnectionResolver
+from .CloudWatchUnit import CloudWatchUnit
 
 
 class CloudWatchCounters(CachedCounters, IReferenceable, IOpenable):

@@ -4,7 +4,7 @@ from abc import ABC
 from pip_services3_commons.commands import CommandSet, ICommandable
 from pip_services3_commons.run import Parameters
 
-from pip_services3_aws.containers.LambdaFunction import LambdaFunction
+from .LambdaFunction import LambdaFunction
 
 
 class CommandableLambdaFunction(LambdaFunction, ABC):

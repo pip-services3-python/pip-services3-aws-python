@@ -2,7 +2,7 @@
 from abc import ABC, abstractmethod
 from typing import List
 
-from pip_services3_aws.services.LambdaAction import LambdaAction
+from .LambdaAction import LambdaAction
 
 
 class ILambdaService(ABC):

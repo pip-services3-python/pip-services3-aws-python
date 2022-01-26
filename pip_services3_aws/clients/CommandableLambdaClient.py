@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from typing import Optional, Any
 
-from pip_services3_aws.clients.LambdaClient import LambdaClient
+from .LambdaClient import LambdaClient
 
 
 class CommandableLambdaClient(LambdaClient):

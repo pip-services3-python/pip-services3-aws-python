@@ -15,7 +15,7 @@ from pip_services3_components.trace.CompositeTracer import CompositeTracer
 from pip_services3_container import Container
 from pip_services3_rpc.services.InstrumentTiming import InstrumentTiming
 
-from pip_services3_aws.services.ILambdaService import ILambdaService
+from pip_services3_aws.services import ILambdaService
 
 
 class LambdaFunction(Container, ABC):

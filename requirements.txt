@@ -1,6 +1,6 @@
-boto3
+boto3 >= 1.20.40, < 2.0.0
 
-pip-services3-commons
-pip-services3-components
-pip_services3_container
-pip_services3_rpc
+pip_services3_commons >= 3.3.11, < 4.0
+pip_services3_components >= 3.5.6, < 4.0
+pip_services3_container >= 3.2.4, < 4.0
+pip_services3_rpc >= 3.3.0, < 4.0
