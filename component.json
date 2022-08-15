@@ -1,6 +1,14 @@
 {
-    "name": "pip_services3_aws",
-    "registry": "pipdevs",
+    "name":  "pip_services3_aws",
+    "type": "module",
+    "language": "python",
     "version": "3.0.6",
-    "build": 0
+    "build": 0,
+    "registry": "pipdevs",
+    "artifacts": [
+        {
+            "name":  "<name>",
+            "type": "pypi"
+        }
+    ]
 }
