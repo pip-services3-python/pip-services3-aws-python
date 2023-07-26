@@ -129,8 +129,8 @@ exploses registered actions externally.</p>
 
 
    <span class="k">def</span> <span class="nf">__action</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">params</span><span class="p">):</span>
-        <span class="n">correlation_id</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">correlation_id</span>
-        <span class="nb">id</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">id</span>
+        <span class="n">correlation_id</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;correlation_id&#39;</span><span class="p">)</span>
+        <span class="nb">id</span> <span class="o">=</span> <span class="n">params</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;id&#39;</span><span class="p">)</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_controller</span><span class="o">.</span><span class="n">get_my_data</span><span class="p">(</span><span class="n">correlationId</span><span class="p">,</span> <span class="nb">id</span><span class="p">)</span>
 
    <span class="k">def</span> <span class="nf">register</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
@@ -151,7 +151,6 @@ exploses registered actions externally.</p>
 <span class="p">))</span>
 
 <span class="n">service</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;123&quot;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;The GRPC service is running on port 8080&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
 <dl class="py method">
@@ -225,7 +224,7 @@ what action shall be called.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pip_services3_aws.services.LambdaService.LambdaService.register">
-<span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_aws.services.LambdaService.LambdaService.register" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">abstract</span><span class="w"> </span></em><span class="sig-name descname"><span class="pre">register</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#pip_services3_aws.services.LambdaService.LambdaService.register" title="Permalink to this definition"></a></dt>
 <dd><p>Registers all service routes in HTTP endpoint.</p>
 <p>This method is called by the service and must be overriden
 in child classes.</p>

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from abc import ABC
+from abc import ABC, abstractmethod
 from typing import List, Any, Optional, Callable
 
 from pip_services3_commons.config import IConfigurable, ConfigParams
@@ -52,8 +52,8 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
            
 
            def __action(self, params):
-                correlation_id = params.correlation_id
-                id = params.id
+                correlation_id = params.get('correlation_id')
+                id = params.get('id')
                 return self._controller.get_my_data(correlationId, id)
 
            def register(self):
@@ -74,7 +74,6 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
         ))
 
         service.open("123")
-        print("The GRPC service is running on port 8080")
 
     """
 
@@ -241,6 +240,10 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
 
         register_action: LambdaAction = LambdaAction(self._generate_action_cmd(name), schema,
                                                      lambda params: action_wrapper(params))
+        
+        self.__actions.append(register_action)
+        
+        self.__actions.append(register_action)
 
     def _register_interceptor(self, action: Callable[[Any, Callable[[Any], Any]], Any]):
         """
@@ -250,6 +253,7 @@ class LambdaService(ILambdaService, IOpenable, IConfigurable, IReferenceable, AB
         """
         self.__interceptors.append(action)
 
+    @abstractmethod
     def register(self):
         """
         Registers all service routes in HTTP endpoint.

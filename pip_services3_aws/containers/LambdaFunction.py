@@ -86,6 +86,13 @@ class LambdaFunction(Container, ABC):
 
     def __get_parameters(self) -> ConfigParams:
         return ConfigParams.from_value(dict(os.environ))
+    
+    def __capture_errors(self, correlation_id: Optional[str]):
+        def handle_exception(exc_type, exc_value, exc_traceback):
+            self._logger.fatal(correlation_id, exc_value, "Process is terminated")
+            sys.exit(1)
+
+        sys.excepthook = handle_exception
 
     def __capture_exit(self, correlation_id: Optional[str]):
         self._logger.info(correlation_id, "Press Control-C to stop the microservice...")
@@ -158,6 +165,7 @@ class LambdaFunction(Container, ABC):
         self.read_config_from_file(correlation_id, path, parameters)
 
         self.__capture_exit(correlation_id)
+        self.__capture_errors(correlation_id)
         self.open(correlation_id)
 
     def register(self):
